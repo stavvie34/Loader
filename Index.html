@@ -1,23 +1,6 @@
+<html>
+
 <head>
-    <script type="text/javascript">
-        $(window).onload(function() {
-            $('body').addClass('loaded');
-        })
-    </script>
-
-    <body>
-        <div id="loader-wrapper">
-            <div id="loader"></div>
-
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-        </div>
-
-        <div id="content">
-            <h2>This is a page title</h2>
-            <p>This is page text.</p>
-        </div>
-    </body>
     <style type="text/css">
         #loader-wrapper {
             position: fixed;
@@ -160,3 +143,28 @@
         }
     </style>
 </head>
+
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <div id="content">
+        <h2>This is a page title</h2>
+        <p>This is page text.</p>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            setTimeout(function() {
+                $('body').addClass('loaded');
+                $('h1').css('color', '#222222')
+            }, 3000);
+
+        });
+    </script>
+</body>
+
+</html>
